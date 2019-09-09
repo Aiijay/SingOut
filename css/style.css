@@ -1,0 +1,243 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: lightgrey;
+  max-width: 1100px;
+}
+/*for the nav bar*/
+.mainnav{
+  background-color: white;
+  margin: auto;
+  padding: 5px;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  
+}
+/*for the div containing the all the content in the navbar*/
+.mainnavbar{
+  display: grid;
+  grid-template-columns: 5fr 3fr 2fr;
+  padding: 2px;
+  align-items: center;
+}
+.mainnavbar h2{
+  font-size: 40px;
+  padding: 3px;
+  font-family: cursive;
+  justify-self: center;
+}
+.mainnavbar ul{
+  justify-self: end;
+  display:flex;
+  list-style: none;
+}
+.mainnavbar ul li a{
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+}
+.mainnavbar ul li{
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mainnavbar h2 span{
+  color: darkred;
+}
+
+#nav ul li a.current{
+  background: darkred;
+  color: white;
+}
+.social a{
+  padding: 10px;
+  color:gray;
+}
+#nav ul li a:hover{
+  background: darkred;
+  color: white;
+}
+/*for the general header*/
+.container{
+  color: white;
+  background: black;
+  padding: 32px;
+  position: relative;
+}
+/*if you want to position an item infont of another,
+the first item showed be positioned relative while the next should be positioned
+absolute*/
+.container:before{
+  content:''; /*this is done because we are trying to insert img in front of the background not content*/
+  background: url("../img/k5.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.showcasecontent{
+  display: grid;
+  grid-template-columns: repeat(2fr 1fr);
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+/*z-index is used to clear out the shadows the image is causing on the content
+ie making the content be on top the image instead of vis versa*/
+.content{
+  z-index: 1;
+
+}
+.Karaoke{
+  display: inline-block;
+  color: white;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 6px 5px;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  background-color:chocolate;
+}
+
+/*styling for the home content*/
+img{
+  width: 280px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.card{
+  background:white;
+  padding: 16px;
+}
+#homearticle .articlecontainer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+.enter, .Club, .Sha{
+  display: inline-block;
+  color: white;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 6px 5px;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  background-color:orange;
+}
+.Bar, .event, .eat{
+  display: inline-block;
+  color: white;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 6px 5px;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  background-color:red;
+}
+h3{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 5px 0;
+}
+p{
+  padding: 4px 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.article h2{
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*styling for the footer*/
+.footer{
+  background: rgb(19, 18, 18);
+  color: white;
+}
+.foot  a{
+  text-decoration: none;
+  color: white;
+}
+.foot  a:hover{
+  color: darkred;
+}
+.foot ul{
+  list-style: none;
+}
+.foot li{
+  padding: 8px 0;
+  border-bottom: 1px dotted solid; 
+}
+.foot{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 30px;
+}
+.foot i{
+  color: gray;
+}
+.foot > *:nth-child(2nd){
+  justify-content: center !important;
+  text-align: center !important;
+  align-content: center !important;
+}
+.btn{
+  display: inline-block;
+  color: white;
+  font-size: 17px;
+  padding: 6px;
+  margin: 5px;
+  border-radius: 15px;
+  background-color:orange;
+}
+.foot > *:last-child{
+  background: rgb(29, 27, 27);
+  grid-column: 1 / span 3;
+  text-align: center;
+  padding: 7px;
+  font-size: 10px;
+  margin-top: 16px;
+}
+p{
+  margin: 8px 0;
+}
+.thiscontainer{
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-gap: 16px;
+  margin: 20px 0;
+}
+.thiscontainer > *:first-child{
+  grid-row: 1 / span 2;
+}
+.aside{
+  padding: 8px;
+  background: darkred;
+}
+.aside p{
+  color: white;
+}
+.aside a{
+  text-decoration: none;
+  width: 100%;
+  text-align: center; 
+}
+.contact{
+  background: rgb(29, 27, 27);
+  color:white;
+  text-align: center;
+  padding-top: 16px;
+  
+}
+.contact i{
+  color:gray;
+}
+h1{text-transform: uppercase;}
